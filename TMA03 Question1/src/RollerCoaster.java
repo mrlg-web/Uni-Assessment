@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 /**
  * RollerCoaster extends Ride
  *
@@ -46,10 +48,8 @@ public class RollerCoaster extends Ride {
         return false;
     }
 
-//    @Override
-//    public int hashCode() {
-//        int result = super.hashCode();
-//        result = 31 * result + numberOfCars;
-//        return result;
-//    }
+    @Override
+    public int hashCode() {
+       return Objects.hash(getName(), getCapacity());  // How getName obtains the name from the class Ride
+    }
 }
